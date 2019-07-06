@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <body>
+
+      <div class="container">
+         <div class="h1">
+            <h1> Comments</h1>
+         </div>
+         <form class="form" action="/submit" method="POST">
+             <fieldset>
+                 <div class="form-group">
+                    <textarea name="message" id="message" rows="8" cols="80"></textarea>
+                 </div>
+                 <input class="btn btn-danger" type="submit" value="Post Comments" />
+             </fieldset>
+         </form>
+         <table class="table">
+            <tr>
+               {{comments}}
+            </tr>
+         </table>
+      </div>
+    </body>
+</html>
