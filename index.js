@@ -3,6 +3,7 @@ var app     = express();
 var path    = require("path");
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var port= process.env.Port || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 var con = mysql.createConnection({
@@ -30,5 +31,5 @@ app.post('/submit',function(req,res){
   });
   });
 })
-app.listen(3000);
+app.listen(port);
 console.log("Running at Port 3000");
